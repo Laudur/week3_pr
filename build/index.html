@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="." />
+  <title>Week3 - Small project</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href="./app.css" rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+  <script src="./metaCoin.js"></script>
+</head>
+<body ng-app="metaCoinApp" ng-controller="metaCoinController">
+  <h1>Week3</h1>
+  <h2>Small project</h2>
+  <h3>Contract address <span class="black"><span id="adrC">{{ adrC }}</span></span></h3>
+  <h3>Contract have <span class="black"><span id="balanceC">{{ balanceC }}</span> WEI</span></h3>
+  <h3>Account A have <span class="black"><span id="balanceA">{{ balanceA }}</span> WEI</span></h3>
+  <h3>Account B have <span class="black"><span id="balanceB">{{ balanceB }}</span> WEI</span></h3>
+
+  <br>
+  <h1>Send</h1>
+  <br><label for="amount">Amount:</label>
+  <input type="text" id="amount" ng-model="amount" placeholder="e.g., 95"></input>
+  <br><br><button id="send" ng-click="sendCoin(amount)">Donate</button>
+  <br><br>
+  <span id="status"></span>
+</body>
+</html>
